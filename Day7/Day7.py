@@ -12,8 +12,8 @@ class Node:
         while queue:
             node = queue.pop()
             for p in node.parents:
-                if p.name not in exclusive_parents:
-                    exclusive_parents.append(p.name)
+                if p.id not in exclusive_parents:
+                    exclusive_parents.append(p.id)
                     queue.append(p)
         return len(exclusive_parents)
 
